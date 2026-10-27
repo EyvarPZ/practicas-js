@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas de JS</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <main class="pagina">
+    <h1>Practicas de JS</h1>
+
+    <section class="lista-ejercicios">
+        <button data-ejercicio="suma">1. Ejecutar código de suma de dos números</button>
+        <button data-ejercicio="signo">2. Ejecutar código de Número Positivo o Negativo</button>
+        <button data-ejercicio="calculadora">3. Ejecutar código de Calculadora</button>
+        <button data-ejercicio="pares">4. Ejecutar código de Suma de números Pares e Impares</button>
+        <button data-ejercicio="tabla">5. Ejecutar código de Tabla de multiplicar</button>
+        <button data-ejercicio="jubilacion">6. Ejecutar código de Jubilación</button>
+    </section>
+    </main>
+
+    <div id="ventana-practica" class="ventana-oculta">
+    <section class="subventana" role="dialog" aria-modal="true">
+        <button id="cerrar" class="cerrar" aria-label="Cerrar">&times;</button>
+        <h2 id="titulo-practica">Práctica 1</h2>
+        <div id="formulario-practica"></div>
+    </section>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #8AA9C4;
+    color: #293f50;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pagina {
+    min-height: 100vh;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 75px;
+    color: #e5f5ef;
+    font-size: clamp(36px, 5vw, 58px);
+    text-shadow: 0 3px 4px rgba(29, 30, 65, 0.28);
+}
+
+.lista-ejercicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+}
+
+.lista-ejercicios button {
+    width: min(700px, 100%);
+    min-height: 58px;
+    padding: 12px 24px;
+    border: 3px solid rgba(79, 83, 145, 0.75);
+    border-radius: 21px;
+    background: #c5eadc;
+    color: #293f50;
+    font-size: clamp(16px, 2vw, 23px);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 0 rgba(44, 43, 85, 0.32);
+    transition: 0.16s ease;
+}
+
+.lista-ejercicios button:hover {
+    background: #dcf7eb;
+    transform: translateY(-3px) scale(1.015);
+}
+
+.lista-ejercicios button:active,
+.lista-ejercicios button.seleccionado {
+    background: #a9dfcf;
+    transform: translateY(3px) scale(0.985);
+    box-shadow: 0 2px 0 rgba(44, 43, 85, 0.35);
+}
+
+.lista-ejercicios button:focus-visible {
+    outline: 4px solid white;
+    outline-offset: 5px;
+}
+
+.ventana-oculta {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    place-items: center;
+    padding: 20px;
+    background: rgba(26, 22, 52, 0.62);
+}
+
+.ventana-oculta.visible {
+    display: grid;
+}
+
+.subventana {
+    width: min(600px, 100%);
+    min-height: 250px;
+    padding: 32px;
+    position: relative;
+    border-radius: 18px;
+    background: #f8fbfc;
+    box-shadow: 0 28px 90px rgba(5, 22, 34, 0.35);
+}
+
+.cerrar {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    border: 0;
+    background: transparent;
+    color: #687685;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 18px;
+    text-align: left;
+    color: #687685;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    padding: 12px;
+    border: 1px solid #dce4ea;
+    border-radius: 9px;
+    font-size: 16px;
+}
+
+.ejecutar {
+    margin-top: 22px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 9px;
+    background: #0b8f87;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.resultado {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #e9f4f3;
+    color: #176760;
+    font-family: monospace;
+}
